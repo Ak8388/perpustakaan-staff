@@ -14,6 +14,14 @@ type Staff struct {
 	NoTelp    string `gorm:"unique" binding:"required" json:"no_telp"`
 }
 
+type Anggota struct {
+	gorm.Model
+	NoAnggota string `json:"no_anggota" binding:"required"`
+	Nama      string `json:"nama" binding:"required"`
+	Umur      int    `json:"umur" binding:"required"`
+	Alamat    string `json:"alamat" binding:"required"`
+}
+
 type Buku struct {
 	gorm.Model
 	NoBuku    string `gorm:"unique" binding:"required" json:"no_buku"`
